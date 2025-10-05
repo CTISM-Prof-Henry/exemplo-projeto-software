@@ -69,7 +69,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+website/_build/
 
 # PyBuilder
 .pybuilder/
@@ -136,7 +136,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+/website
 
 # mypy
 .mypy_cache/

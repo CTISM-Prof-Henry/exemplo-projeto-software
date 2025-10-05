@@ -1,6 +1,8 @@
-# Título do repositório
+# Exemplo de projeto de software
 
-Descrição curta do repositório.
+Esse repositório apresenta um exemplo de projeto de software que segue todas as boas práticas da Engenharia de Software.
+
+
 
 ## Sumário
 
@@ -37,6 +39,8 @@ Crie um novo ambiente virtual com os seguintes comandos (a partir da linha de co
 ```bash
 conda env create -f environment.yml
 conda activate myenv
+npm install --save-dev qunit nyc
+mkdocs new .
 ```
 
 ## Instruções de Uso
