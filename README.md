@@ -37,12 +37,19 @@ Disponíveis em [Diagramas](DIAGRAMAS.md)
 
 ### Para documentação
 
+#### Instalando
+
 Abra a linha de comando **na pasta do projeto** (por exemplo, se você descompactou esse projeto em 
 `C:\Users\henry\Downloads\exemplo-projeto-software`, certifique-se que é esse o caminho que aparece na linha de comando
 ) e digite estes comandos:
 
 ```bash
 pip install -r requirements.txt 
+```
+
+#### Usando
+
+```bash
 mkdocs new .
 ```
 
@@ -59,6 +66,8 @@ npm install --save-dev qunit nyc
 ```
 
 #### Usando
+
+Siga o tutorial a partir de https://github.com/CTISM-Prof-Henry/softwareTesting
 
 ```bash
 npm test
