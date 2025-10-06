@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Empréstimo de livros</title>
+    <!-- bootstrap - para fazer as coisas ficarem bonitas -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- por último, vai o css do projeto -->
+    <link type="stylesheet" href="static/css/index.css">
+</head>
+<body>
+<div class="row m-4">
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-4 text-center">Empréstimo de livros</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="mb-3">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="label-select-livro">Livro</span>
+                        <select class="form-select" aria-label="Seletor de livro" id="select-livro" required>
+                            <option value="" selected disabled>Selecione o livro</option>
+                            <option value="1">Memórias Póstumas de Brás Cubas</option>
+                            <option value="2">Senhor dos Anéis: A Sociedade do Anel</option>
+                            <option value="3">As Crônicas de Gelo e Fogo</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="label-select-usuario">Usuário</span>
+                        <select class="form-select" aria-label="Seletor de usuário" id="select-usuario" required>
+                            <option value="" selected disabled>Selecione o livro</option>
+                            <option value="1">João</option>
+                            <option value="2">Maria</option>
+                            <option value="3">José</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="label-select-datas">Período</span>
+                        <input id="select-datas" class="form-control"/>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button
+                            class="btn btn-primary" id="button-emprestar"
+                            data-bs-toggle="modal" data-bs-target="#modal-emprestimo"
+                        >
+                            Solicitar empréstimo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <p class="lead">
+                        Empréstimos realizados
+                    </p>
+                    <ul class="list-group" id="list-emprestimos">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="table-container border rounded bg-white">
+                    <table class="table table-hover mb-0" id="data-table">
+                        <thead class="table-light"></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="modal-emprestimo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Solicitação</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-emprestimo-texto"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!-- bootstrap - para fazer as coisas ficarem bonitas -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<!-- para usar um seletor de datas com calendário -->
+<!-- adaptei daqui: https://easepick.com/packages/bundle.html -->
+<script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+<script type="application/javascript">
+    const picker = new easepick.create({
+        element: document.getElementById('select-datas'),
+        format: 'DD/MM/YYYY',
+        lang: 'pt-BR',
+        css: [
+            'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.css',
+        ],
+        plugins: ['RangePlugin'],
+        RangePlugin: {
+            tooltip: true,
+            delimiter: ' até ',
+            locale: {
+                one: 'dia',
+                other: 'dias',
+            },
+        },
+    });
+</script>
+<!-- por último, vai o javascript do projeto -->
+<script src="static/js/src/index.js"></script>
+</html>
