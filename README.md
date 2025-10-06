@@ -5,12 +5,13 @@ Esse repositório apresenta um exemplo de projeto de software que segue todas as
 ## Checklist
 
 - [ ] Protótipo no Figma
-- [ ] Diagrama de classe
-- [ ] Diagrama de caso de uso
-- [ ] Documentação com MKDocs
+- [x] Diagrama de classe
+- [x] Diagrama de caso de uso
+- [ ] Documentação no GitHub Pages com MKDocs
 - [x] Testes unitários com QUnit
 - [x] linter com ESLint 
 - [x] Produto final (software)
+- [ ] GitHub Action para rodar tudo automaticamente
 
 ## Pré-requisitos
 
