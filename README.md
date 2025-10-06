@@ -9,7 +9,7 @@ Esse repositório apresenta um exemplo de projeto de software que segue todas as
 - [ ] Diagrama de caso de uso
 - [ ] Documentação com MKDocs
 - [x] Testes unitários com QUnit
-- [ ] linter 
+- [x] linter com ESLint 
 - [x] Produto final (software)
 
 ## Pré-requisitos
@@ -27,6 +27,10 @@ Na data de escrita deste repositório, todos os requisitos são atendidos pelos 
 ### Testando se os pré-requisitos estão instalados
 
 ![teste_cli.gif](images/teste_cli.gif)
+
+## Diagramas
+
+Disponíveis em [Diagramas](DIAGRAMAS.md)
 
 ## Instalação
 
@@ -47,10 +51,16 @@ Continue a partir do tutorial em https://github.com/CTISM-Prof-Henry/docsTutoria
 
 ### Para testes 
 
-Ainda na linha de comando, digite estes comandos:
+#### Instalando
 
 ```bash
 npm install --save-dev qunit nyc
+```
+
+#### Usando
+
+```bash
+npm test
 ```
 
 ### Para linter
