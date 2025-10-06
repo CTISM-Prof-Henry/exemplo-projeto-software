@@ -1,15 +1,25 @@
 {
     "devDependencies": {
+        "@eslint/js": "^9.37.0",
+        "eslint": "^9.37.0",
+        "globals": "^16.4.0",
         "nyc": "^17.1.0",
         "qunit": "^2.24.1"
     },
     "scripts": {
         "test": "nyc qunit \"website/static/js/test/**/*.js\""
     },
-     "nyc": {
-         "reporter": ["text", "html"],
-         "include": ["src/**/*.js"],
-         "exclude": ["test/**/*.js"],
-         "all": true
-     }
+    "nyc": {
+        "reporter": [
+            "text",
+            "html"
+        ],
+        "include": [
+            "src/**/*.js"
+        ],
+        "exclude": [
+            "test/**/*.js"
+        ],
+        "all": true
+    }
 }

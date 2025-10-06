@@ -41,13 +41,13 @@ function main() {
     window.biblioteca = new Biblioteca();
 
     // inicia a biblioteca com 3 usuários e 3 livros
-    biblioteca.adicionarLivro('Memórias Póstumas de Brás Cubas', 'Machado de Assis', 1881);
-    biblioteca.adicionarLivro('Senhor dos Anéis: A Sociedade do Anel', 'J. R. R. Tolkien', 1954);
-    biblioteca.adicionarLivro('As Crônicas de Gelo e Fogo', 'George R. R. Martin', 1996);
+    window.biblioteca.adicionarLivro('Memórias Póstumas de Brás Cubas', 'Machado de Assis', 1881);
+    window.biblioteca.adicionarLivro('Senhor dos Anéis: A Sociedade do Anel', 'J. R. R. Tolkien', 1954);
+    window.biblioteca.adicionarLivro('As Crônicas de Gelo e Fogo', 'George R. R. Martin', 1996);
 
-    biblioteca.adicionarUsuario('João', 'joao@gmail.com', '1234');
-    biblioteca.adicionarUsuario('Maria', 'maria@gmail.com', '1234');
-    biblioteca.adicionarUsuario('José', 'jose@gmail.com', '1234');
+    window.biblioteca.adicionarUsuario('João', 'joao@gmail.com', '1234');
+    window.biblioteca.adicionarUsuario('Maria', 'maria@gmail.com', '1234');
+    window.biblioteca.adicionarUsuario('José', 'jose@gmail.com', '1234');
 
     //adiciona callbacks
     document.getElementById('button-emprestar').addEventListener('click', callbackAdicionarEmprestimo);

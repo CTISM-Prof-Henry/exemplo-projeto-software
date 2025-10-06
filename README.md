@@ -2,63 +2,72 @@
 
 Esse repositório apresenta um exemplo de projeto de software que segue todas as boas práticas da Engenharia de Software.
 
+## Checklist
 
-
-## Sumário
-
-* [Pré-requisitos](#pré-requisitos)
-* [Instalação](#instalação)
-* [Instruções de uso](#instruções-de-uso)
-* [Contato](#contato)
-* [Bibliografia](#bibliografia)
+- [ ] Protótipo no Figma
+- [ ] Diagrama de classe
+- [ ] Diagrama de caso de uso
+- [ ] Documentação com MKDocs
+- [x] Testes unitários com QUnit
+- [ ] linter 
+- [x] Produto final (software)
 
 ## Pré-requisitos
 
-Este repositório requer a última versão do [Python Anaconda](https://www.anaconda.com/download) para ser executado, 
-visto que usa o gerenciador de pacotes conda. O código executará em qualquer Sistema Operacional, mas foi desenvolvido
-originalmente para Windows 10 Pro (64 bits).
+Na data de escrita deste repositório, todos os requisitos são atendidos pelos computadores dos laboratórios:
 
-No instalador, certifique-se de adicionar à variável PATH do sistema o caminho do Anaconda:
+* A documentação com MKDocs exige uma instalação Python 3.x na sua máquina, e a possibilidade de executar comandos 
+  Python pelo terminal. Se precisar instalar, prefira a distribuição 
+  [Python Anaconda](https://www.anaconda.com/download/success), e marque, no instalador, a opção de adicionar os 
+  binários ao PATH do sistema:
+  ![path_anaconda.png](images/path_anaconda.png)
+* Os testes de software exigem node.js para execução e npm para instalação de pacotes, e, igualmente, adicionados ao
+  PATH do sistema. Você pode baixá-los aqui: https://nodejs.org/pt/download
 
-![img.png](images/path_anaconda.png)
+### Testando se os pré-requisitos estão instalados
 
-As configurações da máquina que o repositório foi desenvolvido encontram-se na tabela abaixo:
-
-| Configuração        | Valor                    |
-|---------------------|--------------------------|
-| Sistema operacional | Windows 10 Pro (64 bits) |
-| Processador         | Intel core i7 9700       |
-| Memória RAM         | 16GB                     |
-| Necessita rede?     | Sim                      |
-
+![teste_cli.gif](images/teste_cli.gif)
 
 ## Instalação
 
-Crie um novo ambiente virtual com os seguintes comandos (a partir da linha de comando):
+### Para documentação
+
+Abra a linha de comando **na pasta do projeto** (por exemplo, se você descompactou esse projeto em 
+`C:\Users\henry\Downloads\exemplo-projeto-software`, certifique-se que é esse o caminho que aparece na linha de comando
+) e digite estes comandos:
 
 ```bash
-conda env create -f environment.yml
-conda activate myenv
-npm install --save-dev qunit nyc
+pip install -r requirements.txt 
 mkdocs new .
 ```
 
-## Instruções de Uso
+Isso irá criar uma pasta `docs` e um arquivo `mkdocs.yml` na raiz do projeto.
 
-Descreva aqui o passo-a-passo que outros usuários precisam realizar para conseguir executar com sucesso o código-fonte
-deste projeto:
+Continue a partir do tutorial em https://github.com/CTISM-Prof-Henry/docsTutorial
+
+### Para testes 
+
+Ainda na linha de comando, digite estes comandos:
 
 ```bash
-conda activate myenv
-python main.py
+npm install --save-dev qunit nyc
 ```
 
-## Contato
+### Para linter
 
-O repositório foi originalmente desenvolvido por Fulano: [fulano@ufsm.br]()
+#### Instalando
 
-## Bibliografia
+```bash
+npm install --save-dev eslint
+npx eslint --init
+```
 
-Adicione aqui entradas numa lista com a documentação pertinente:
+Isso abrirá uma sequência de perguntas sobre o seu projeto:
 
-* [Documentação coplin-db2](https://pypi.org/project/coplin-db2/)
+![eslint_instalacao.png](images/eslint_instalacao.png)
+
+#### Usando
+
+```bash
+npx eslint website/static/js/src
+```
