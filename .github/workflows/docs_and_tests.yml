@@ -1,7 +1,0 @@
-name: docs_and_tests.yml
-on:
-  - push
-branch:
-    - main
-jobs:
-  docs:
