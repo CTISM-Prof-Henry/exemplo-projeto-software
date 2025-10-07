@@ -1,4 +1,4 @@
-name: Gera documentação com MKDocs e publica no GitHub Pages
+name: Gera documentação com MKDocs e publica site e documentação no GitHub Pages
 on:
   push:
     branches:
@@ -27,13 +27,23 @@ jobs:
       - name: Constrói páginas HTML com MKDocs
         run: mkdocs build
 
+      - name: Prepara pasta de deploy
+        run: |
+            rm -rf deploy
+            mkdir deploy
+            # Copia site estático
+            cp -r website/* deploy/
+            # Copia docs para deploy/docs
+            mkdir deploy/docs
+            cp -r site/* deploy/docs/
+
       - name: Configura o GitHub Pages
         uses: actions/configure-pages@v3
 
       - name: Envia dados para o GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/'
+          path: 'deploy/'
 
       - name: Publica páginas HTML no GitHub Pages
         id: deployment
