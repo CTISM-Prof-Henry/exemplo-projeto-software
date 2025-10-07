@@ -7,91 +7,20 @@ Esse repositório apresenta um exemplo de projeto de software que segue todas as
 - [ ] Protótipo no Figma
 - [x] Diagrama de classe
 - [x] Diagrama de caso de uso
-- [ ] Documentação no GitHub Pages com MKDocs
+- [x] Documentação no GitHub Pages com MKDocs
 - [x] Testes unitários com QUnit
 - [x] linter com ESLint 
 - [x] Produto final (software)
-- [ ] GitHub Actions para rodar tudo automaticamente
+- [x] GitHub Actions para rodar tudo automaticamente
   - [x] documentação
   - [x] testes
-  - [ ] linter
-  - [ ] deploy do site
+  - [x] linter
+  - [x] deploy do site
 
-## Pré-requisitos
+## Configuração
 
-Na data de escrita deste repositório, todos os requisitos são atendidos pelos computadores dos laboratórios:
+Confira as instruções de configuração em https://ctism-prof-henry.github.io/exemplo-projeto-software/docs
 
-* A documentação com MKDocs exige uma instalação Python 3.x na sua máquina, e a possibilidade de executar comandos 
-  Python pelo terminal. Se precisar instalar, prefira a distribuição 
-  [Python Anaconda](https://www.anaconda.com/download/success), e marque, no instalador, a opção de adicionar os 
-  binários ao PATH do sistema:
-  ![path_anaconda.png](images/path_anaconda.png)
-* Os testes de software exigem node.js para execução e npm para instalação de pacotes, e, igualmente, adicionados ao
-  PATH do sistema. Você pode baixá-los aqui: https://nodejs.org/pt/download
+## Execução
 
-### Testando se os pré-requisitos estão instalados
-
-![teste_cli.gif](images/teste_cli.gif)
-
-## Diagramas
-
-Disponíveis em [Diagramas](docs/diagramas.md)
-
-## Instalação
-
-### Para documentação
-
-#### Instalando
-
-Abra a linha de comando **na pasta do projeto** (por exemplo, se você descompactou esse projeto em 
-`C:\Users\henry\Downloads\exemplo-projeto-software`, certifique-se que é esse o caminho que aparece na linha de comando
-) e digite estes comandos:
-
-```bash
-pip install -r requirements.txt 
-```
-
-#### Usando
-
-```bash
-mkdocs new .
-```
-
-Isso irá criar uma pasta `docs` e um arquivo `mkdocs.yml` na raiz do projeto.
-
-Continue a partir do tutorial em https://github.com/CTISM-Prof-Henry/docsTutorial
-
-### Para testes 
-
-#### Instalando
-
-```bash
-npm install --save-dev qunit nyc
-```
-
-#### Usando
-
-Siga o tutorial a partir de https://github.com/CTISM-Prof-Henry/softwareTesting
-
-```bash
-npm test
-```
-
-### Para linter
-
-#### Instalando
-
-```bash
-npm install --save-dev eslint
-npx eslint --init
-```
-
-Isso abrirá uma sequência de perguntas sobre o seu projeto:
-
-![eslint_instalacao.png](images/eslint_instalacao.png)
-
-#### Usando
-
-```bash
-npx eslint website/static/js/src
-```
+Confira o site rodando em https://ctism-prof-henry.github.io/exemplo-projeto-software

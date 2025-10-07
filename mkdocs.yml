@@ -1,5 +1,10 @@
 site_name: Documentação Software Biblioteca
 theme: readthedocs
+
+nav:
+  - Página inicial: index.md
+  - Diagramas: diagramas.md
+
 markdown_extensions:
   - attr_list
   - footnotes
@@ -10,3 +15,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+plugins:
+  - search
