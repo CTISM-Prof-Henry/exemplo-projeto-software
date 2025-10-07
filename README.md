@@ -11,7 +11,11 @@ Esse repositório apresenta um exemplo de projeto de software que segue todas as
 - [x] Testes unitários com QUnit
 - [x] linter com ESLint 
 - [x] Produto final (software)
-- [ ] GitHub Action para rodar tudo automaticamente
+- [ ] GitHub Actions para rodar tudo automaticamente
+  - [x] documentação
+  - [x] testes
+  - [ ] linter
+  - [ ] deploy do site
 
 ## Pré-requisitos
 
@@ -31,7 +35,7 @@ Na data de escrita deste repositório, todos os requisitos são atendidos pelos 
 
 ## Diagramas
 
-Disponíveis em [Diagramas](DIAGRAMAS.md)
+Disponíveis em [Diagramas](docs/diagramas.md)
 
 ## Instalação
 

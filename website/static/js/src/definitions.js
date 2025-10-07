@@ -45,6 +45,7 @@ export class Biblioteca {
     adicionarLivro(titulo, autor, ano) {
         this.ultimo_id_livro += 1;
         this.livros.push(new Livro(this.ultimo_id_livro, titulo, autor, ano));
+        return this.ultimo_id_livro;
     }
 
     adicionarUsuario(nome, email, senha) {
@@ -57,6 +58,7 @@ export class Biblioteca {
 
         this.ultimo_id_usuario += 1;
         this.usuarios.push(new Usuario(this.ultimo_id_usuario, nome, email, senha));
+        return this.ultimo_id_usuario;
     }
 
     adicionarEmprestimo(id_livro, id_usuario, data_emprestimo, data_devolucao) {
@@ -89,6 +91,7 @@ export class Biblioteca {
                 this.ultimo_id_emprestimo, id_livro, id_usuario, data_emprestimo, data_devolucao
             )
         );
+        return this.ultimo_id_emprestimo;
     }
 
     getUsuario(id_usuario) {

@@ -1,4 +1,4 @@
-name: Gera documentação com MKDocs e publica no GitHub Pages
+name: Transfere páginas HTML para o GitHub Pages
 on:
   push:
     branches:
@@ -14,26 +14,13 @@ jobs:
       - name: Clona repositório no servidor remoto do GitHub
         uses: actions/checkout@v5
 
-      - name: Configura o interpretador Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Instala bibliotecas Python
-        run: |
-          python -m pip install --upgrade pip
-          pip install --requirement requirements.txt
-
-      - name: Constrói páginas HTML com MKDocs
-        run: mkdocs build
-
       - name: Configura o GitHub Pages
         uses: actions/configure-pages@v3
 
       - name: Envia dados para o GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/'
+          path: 'site/'
 
       - name: Publica páginas HTML no GitHub Pages
         id: deployment
