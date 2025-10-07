@@ -20,7 +20,7 @@ jobs:
       - name: Envia dados para o GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'site/'
+          path: 'website/'
 
       - name: Publica páginas HTML no GitHub Pages
         id: deployment
