@@ -5,17 +5,16 @@ Esse repositório apresenta um exemplo de projeto de software que segue todas as
 ## Checklist
 
 - [ ] Protótipo no Figma
-- [x] Diagrama de classe
-- [x] Diagrama de caso de uso
-- [x] Documentação no GitHub Pages com MKDocs
-- [x] Testes unitários com QUnit
-- [x] linter com ESLint 
-- [x] Produto final (software)
+- [x] [Diagrama de classe](https://ctism-prof-henry.github.io/exemplo-projeto-software/docs/diagramas)
+- [x] [Diagrama de caso de uso](https://ctism-prof-henry.github.io/exemplo-projeto-software/docs/diagramas)
+- [x] Documentação no GitHub Pages com MKDocs ([código](docs), [executando](https://ctism-prof-henry.github.io/exemplo-projeto-software/docs))
+- [x] [Testes unitários com QUnit](website/static/js/test/definitions.test.js)
+- [x] linter com ESLint
+- [x] [Produto final (software)](https://ctism-prof-henry.github.io/exemplo-projeto-software)
 - [x] GitHub Actions para rodar tudo automaticamente
-  - [x] documentação
-  - [x] testes
-  - [x] linter
-  - [x] deploy do site
+  - [x] [documentação e deploy do site](.github/workflows/documentation.yml)
+  - [x] [testes](.github/workflows/tests.yml)
+  - [x] [linter](.github/workflows/linter.yml)
 
 ## Configuração
 
